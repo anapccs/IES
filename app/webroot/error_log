@@ -1,0 +1,7 @@
+[28-Nov-2013 20:07:33] PHP Fatal error:  Call to undefined method DateTime::diff() in /home/compr601/public_html/reserva.cesufoz.edu.br/app/Controller/ConfigsController.php on line 81
+[28-Nov-2013 20:09:45] PHP Fatal error:  Call to undefined method DateTime::diff() in /home/compr601/public_html/reserva.cesufoz.edu.br/app/Controller/ConfigsController.php on line 81
+[28-Nov-2013 20:10:17] PHP Fatal error:  Call to undefined method DateTime::diff() in /home/compr601/public_html/reserva.cesufoz.edu.br/app/Controller/ConfigsController.php on line 81
+[28-Nov-2013 20:10:21] PHP Fatal error:  Call to undefined method DateTime::diff() in /home/compr601/public_html/reserva.cesufoz.edu.br/app/Controller/ConfigsController.php on line 81
+[28-Nov-2013 20:10:48] PHP Fatal error:  Call to undefined method DateTime::diff() in /home/compr601/public_html/reserva.cesufoz.edu.br/app/Controller/ConfigsController.php on line 81
+[28-Nov-2013 20:10:55] PHP Fatal error:  Call to undefined method DateTime::diff() in /home/compr601/public_html/reserva.cesufoz.edu.br/app/Controller/ConfigsController.php on line 81
+[28-Nov-2013 20:11:02] PHP Fatal error:  Call to undefined method DateTime::diff() in /home/compr601/public_html/reserva.cesufoz.edu.br/app/Controller/ConfigsController.php on line 81
