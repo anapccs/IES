@@ -132,9 +132,7 @@ class BookingsController extends AppController {
         $opts = array('fields' => array('id', 'schedules'), 'conditions' => array('status' => 1));
         $schedules = $this->Schedule->find('list', $opts);
         $this->set(compact('schedules'));
-        /*$equipaments = $this->Booking->Equipament->find('list');
-        $classrooms = $this->Booking->Classroom->find('list');
-        $this->set(compact('equipaments', 'classrooms'));*/
+
 	}
 
 /**

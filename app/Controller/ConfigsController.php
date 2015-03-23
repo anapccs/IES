@@ -86,6 +86,44 @@ class ConfigsController extends AppController {
             echo json_encode(date('H\hi', strtotime($limit['Config']['total_time'])));
     }
 
+    public function getMinMaxDate()
+    {
+        $this->autoRender = false;
+
+        $config = $this->Config->find('first', array('fields' => array('check_in', 'total_days')));
+
+        $maxDays = $config['Config']['total_days'];
+        $minHours = $config['Config']['check_in'];
+
+        $now = new DateTime();
+        $checkin = new DateTime(date('Y-m-d') . ' ' . $minHours);
+
+        $minDate = array('year' => $now->format('Y'),
+                         'month' => $now->format('n'),
+                         'day' => $now->format('d'),
+        );
+
+        if (strtotime($now->format('Y-m-d H:i:s')) > strtotime($checkin->format('Y-m-d H:i:s'))) {
+
+            $now->add(new DateInterval('P01D'));
+
+            $minDate = array('year' => $now->format('Y'),
+                            'month' => $now->format('n'),
+                            'day' => $now->format('d'),
+            );
+        }
+
+        $now = new DateTime();
+        $now->add(new DateInterval('P' . $maxDays . 'D'));
+
+        $maxDate =  array('year' => $now->format('Y'),
+                            'month' => $now->format('n'),
+                            'day' => $now->format('d'),
+                        );
+
+        echo json_encode(array('minDate' => $minDate, 'maxDate' => $maxDate));
+    }
+
 /**
  * delete method
  *

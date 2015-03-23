@@ -4,7 +4,7 @@
 		<legend><?php echo __('Adicionar Reserva'); ?></legend>
 	<?php
 //    echo $this->Form->input('date', array('label' => 'Data', 'type' => 'text', 'class' => 'date-picker', 'value' => '25/11/2013'));
-    echo $this->Form->input('date', array('label' => 'Data', 'type' => 'text', 'class' => 'date-picker'));
+    echo $this->Form->input('date', array('label' => 'Data', 'type' => 'text', 'class' => 'date-picker', 'readonly' => true));
 
     //echo $this->Form->input('start', array('label' => 'Início', 'type' => 'text', 'class' => 'time-picker', 'value' => '19:10'));
     if($schedules != NULL){

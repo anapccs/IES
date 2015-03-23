@@ -20,6 +20,8 @@ $(document).ready(function(){
         dateFormat: "dd/mm/yy"
     });
 
+    getMinDate();
+
     $('#BookingEquipamentId').click(function(){
         if($('.date-picker').val() == ''){
             showAlert('Informe uma data');
@@ -144,4 +146,22 @@ function getTotalTime(){
             }
         });
     }
+}
+
+function getMinDate(){
+
+    $.ajax({
+        async: true,
+        url: '/configs/getMinMaxDate',
+        type: 'GET',
+        dataType: 'json',
+        success: function (data) {
+            $('.date-picker').datepicker( "option", "minDate", new Date(data.minDate.year, data.minDate.month - 1, data.minDate.day) );
+            $('.date-picker').datepicker( "option", "maxDate", new Date(data.maxDate.year, data.maxDate.month - 1, data.maxDate.day) );
+        },
+        error: function () {
+            showAlert('Erro ao calcular limite de horário mínimo para confirmação');
+        }
+    });
+
 }

@@ -31,11 +31,6 @@
  * ...and connect the rest of 'Pages' controller's urls.
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
-	
-	/*Router::connect('/refeicoes', array('controller' => 'meals', 'action' => 'index'));
-	Router::connect('/refeicoes/add', array('controller' => 'meals', 'action' => 'add'));
-	Router::connect('/refeicoes/edit', array('controller' => 'meals', 'action' => 'edit'));
-	Router::connect('/refeicoes/delete', array('controller' => 'meals', 'action' => 'delete'));*/
 
 /**
  * Load all plugin routes. See the CakePlugin documentation on
