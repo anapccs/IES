@@ -20,6 +20,7 @@ $(document).ready(function(){
         dateFormat: "dd/mm/yy"
     });
 
+    
     getMinDate();
 
     $('#BookingEquipamentId').click(function(){

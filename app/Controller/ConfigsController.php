@@ -86,6 +86,7 @@ class ConfigsController extends AppController {
             echo json_encode(date('H\hi', strtotime($limit['Config']['total_time'])));
     }
 
+
     public function getMinMaxDate()
     {
         $this->autoRender = false;
